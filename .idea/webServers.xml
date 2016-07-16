@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="58d2f402-66f4-47d9-9725-58a4040576f7" name="unetlab" url="http://192.168.0.39">
+        <fileTransfer host="192.168.0.39" port="22" rootFolder="/home/ansible" accessType="SFTP" password="dfcbdfc4dfd9dfc3dfc8dfc6dfcf" username="ansible">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+router bgp {{ bgp_as }}
+
+{% for n in bgp_networks %}
+  network {{ n.network }}/{{ n.mask }}
+{% endfor %}

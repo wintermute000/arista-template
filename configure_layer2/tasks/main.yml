@@ -1,0 +1,17 @@
+---
+  - name: Configure Vlans
+    eos_template:
+      src: vlans.j2
+      provider: "{{ eos_connection }}"
+
+  - name: Configure Port-channels
+    eos_template:
+      src: port-channels.j2
+      provider: "{{ eos_connection }}"
+      force: yes
+
+  - name: Configure Switchports
+    eos_template:
+      src: switchports.j2
+      provider: "{{ eos_connection }}"
+      force: yes

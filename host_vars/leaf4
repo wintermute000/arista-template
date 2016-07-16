@@ -1,0 +1,52 @@
+mlag_domain_id: MLAG_LEAF3_LEAF4
+mlag_peer_ip: 172.31.94.5
+bgp_as: 65003
+bgp_rid: 192.168.254.14
+bgp_keepalive: 3
+bgp_holdtime: 10
+bgp_lvtep_net: 172.31.1.3
+
+ip_addresses:
+  - interface: Loopback0
+    description: Router-ID
+    ip_address: 192.168.254.14/32
+  - interface: Loopback1
+    description: Logical-VTEP
+    ip_address: 172.31.1.3/32
+  - interface: Vlan4094
+    description: "MLAG-peering"
+    ip_address: 172.31.94.6/30
+  - interface: Vlan4093
+    description: "iBGP-peering"
+    ip_address: 172.31.93.6/30
+  - interface: Ethernet3
+    description: "To-Spine1"
+    ip_address: 192.168.1.14/30
+  - interface: Ethernet4
+    description: "To-Spine2"
+    ip_address: 192.168.2.14/30
+
+bgp_neighbors:
+  - peer_ip: 192.168.1.13
+    peer_as: 65000
+  - peer_ip: 192.168.2.13
+    peer_as: 65000
+  - peer_ip: 172.31.93.5
+    peer_as: 65003
+
+bgp_networks:
+  - network: 192.168.254.14
+    mask: 32
+  - network: 172.31.1.3
+    mask: 32
+
+vxlan_vni:
+  - vlan: 10
+    vni: 1010
+  - vlan: 20
+    vni: 1020
+
+vxlan_floodlist:
+  - vtep: Vxlan1
+    flood_list:
+      - 172.31.1.1

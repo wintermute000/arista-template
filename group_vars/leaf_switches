@@ -1,0 +1,53 @@
+vlans:
+  - vlan_id: 4094
+    name: "MLAG-peering"
+    trunk_group: "TG-MLAG"
+  - vlan_id: 4093
+    name: "iBGP-peering"
+    trunk_group: "TG-iBGP"
+  - vlan_id: 10
+    name: "Hosting-10.1.1.0_24"
+  - vlan_id: 20
+    name: "Hosting-10.2.2.0_24"
+
+port_channels:
+  - port_channel_id: 1
+    mode: active
+    members:
+      - Ethernet1
+      - Ethernet2
+  - port_channel_id: 6
+    mode: active
+    members:
+      - Ethernet6
+  - port_channel_id: 7
+    mode: active
+    members:
+      - Ethernet7
+
+switchports:
+  - switchport_id: "Port-Channel1"
+    description: "To-Peer-Switch"
+    mode: trunk
+    trunk_groups:
+      - "TG_MLAG"
+      - "TG-iBGP"
+  - switchport_id: "Port-Channel6"
+    description: "To-VLAN-20-host"
+    mode: trunk
+    allowed_vlans:
+      - 10
+  - switchport_id: "Port-Channel7"
+    description: "To-VLAN-10-host"
+    mode: trunk
+    allowed_vlans:
+      - 20
+
+mlags:
+  - mlag_id: 6
+    mlag_member: "Port-Channel6"
+  - mlag_id: 7
+    mlag_member: "Port-Channel7"
+
+
+

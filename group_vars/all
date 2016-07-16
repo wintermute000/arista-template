@@ -1,0 +1,10 @@
+eos_connection:
+  host: "{{ inventory_hostname }}"
+  username: cisco
+  password: cisco
+  auth_pass: cisco
+  authorize: yes
+  transport: eapi
+  use_ssl: false
+
+command: "show interfaces"

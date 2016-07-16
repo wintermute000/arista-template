@@ -1,0 +1,6 @@
+---
+  - name: Configure IP Addresses
+    eos_template:
+      src: ip.j2
+      provider: "{{ eos_connection }}"
+
