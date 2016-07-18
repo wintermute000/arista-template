@@ -1,7 +1,6 @@
 {% for p in port_channels %}
-    {% for m in p.members %}
-        interface {{ m }}
-        channel-group {{ p.port_channel_id }} mode {{ p.mode }}
-
-    {% endfor %}
+{% for m in p.members %}
+interface {{ m }}
+   channel-group {{ p.port_channel_id }} mode {{ p.mode }}
+   {% endfor %}
 {% endfor %}
