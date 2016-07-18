@@ -3,16 +3,16 @@
     eos_template:
       src: bgp_process.j2
       provider: "{{ eos_connection }}"
-      force: yes
+      #force: yes
 
   - name: Configure BGP neighbors
     eos_template:
       src: bgp_neighbors.j2
       provider: "{{ eos_connection }}"
-      force: yes
+      #force: yes
 
   - name: Configure BGP advertisements
     eos_template:
       src: bgp_networks.j2
       provider: "{{ eos_connection }}"
-      force: yes
+      #force: yes
