@@ -5,6 +5,9 @@ Tested with vEOS 4.15.5M in Unetlab 1.0.0-12 and Ansible 2.1
 http://ansible-eos.readthedocs.io/en/master/quickstart.html
 
 ### UNDER DEVELOPMENT ###
+v0.2
+- Still testing, fixed indentation to align to eos_template requirements
+- MLAG and VXLAN roles yet to be implemented
 
 ### SAMPLE TOPOLOGY VARIABLES ###
 
