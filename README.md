@@ -53,4 +53,4 @@ ROLES
 
 VARIABLES
 
-Use all, groupvars, and hostvars as normal - sample variables included to produce sample topology described
+Use groupvars, and hostvars as normal - sample variables included to produce sample topology described
