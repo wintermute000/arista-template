@@ -4,9 +4,9 @@ Tested with vEOS 4.15.5M in Unetlab 1.0.0-12 and Ansible 2.1
 
 http://ansible-eos.readthedocs.io/en/master/quickstart.html
 
-UNDER DEVELOPMENT
+### UNDER DEVELOPMENT ###
 
-SAMPLE TOPOLOGY VARIABLES
+### SAMPLE TOPOLOGY VARIABLES ###
 
 - routed
 - eBGP - spine AS 65000, leaf1/2 AS65001, leaf3/4 AS65003
@@ -22,15 +22,29 @@ SAMPLE TOPOLOGY VARIABLES
   - logical VTEPs on Lo1
 - NO vVTEP or anycast GW - hosts are L2 only via VXLAN
 
-spine1-leaf1 - 192.168.1.0/30 spine1-leaf2 - 192.168.1.4/30 spine1-leaf3 - 192.168.1.8/30 spine1-leaf4 - 192.168.1.12/30
+spine1-leaf1 - 192.168.1.0/30
+spine1-leaf2 - 192.168.1.4/30
+spine1-leaf3 - 192.168.1.8/30
+spine1-leaf4 - 192.168.1.12/30
 
-spine2-leaf1 - 192.168.2.0/30 spine2-leaf2 - 192.168.2.4/30 spine2-leaf3 - 192.168.2.8/30 spine2-leaf4 - 192.168.2.12/30
+spine2-leaf1 - 192.168.2.0/30
+spine2-leaf2 - 192.168.2.4/30
+spine2-leaf3 - 192.168.2.8/30
+spine2-leaf4 - 192.168.2.12/30
 
-spine1 lo0 - 192.168.254.1/32 spine2 lo0 - 192.168.254.2/32 leaf1 lo0 - 192.168.254.11/32 leaf2 lo0 - 192.168.254.12/32 leaf3 lo0 - 192.168.254.13/32 leaf4 lo0 - 192.168.254.14/32
+spine1 lo0 - 192.168.254.1/32
+spine2 lo0 - 192.168.254.2/32
+leaf1 lo0 - 192.168.254.11/32
+leaf2 lo0 - 192.168.254.12/32
+leaf3 lo0 - 192.168.254.13/32
+leaf4 lo0 - 192.168.254.14/32
 
-leaf1 lo1 logical VTEP - 172.31.1.1/32 leaf2 lo1 logical VTEP - 172.31.1.1/32 leaf3 lo1 logical VTEP - 172.31.1.3/32 leaf4 lo1 logical VTEP - 172.31.1.3/32
+leaf1 lo1 logical VTEP - 172.31.1.1/32
+leaf2 lo1 logical VTEP - 172.31.1.1/32
+leaf3 lo1 logical VTEP - 172.31.1.3/32
+leaf4 lo1 logical VTEP - 172.31.1.3/32
 
-ROLES
+### ROLES ###
 
 - configure_layer2
   - creates VLANs
@@ -51,6 +65,6 @@ ROLES
   - creates VLAN to VNI mappings
   - configure flood-list
 
-VARIABLES
+### VARIABLES ###
 
 Use groupvars, and hostvars as normal - sample variables included to produce sample topology described
