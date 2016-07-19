@@ -1,0 +1,5 @@
+---
+  - name: Configure MLAG
+    eos_template:
+      src: mlag.j2
+      provider: "{{ eos_connection }}"

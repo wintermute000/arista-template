@@ -1,0 +1,5 @@
+---
+  - name: Configure VXLAN
+    eos_template:
+      src: vxlan.j2
+      provider: "{{ eos_connection }}"

@@ -1,0 +1,13 @@
+{% if mlag_domain_id is defined %}
+mlag
+   domain-id {{ mlag_domain_id }}
+   local-interface {{ mlag_interface }}
+   peer-address {{ mlag_peer_ip }}
+   peer-link {{ mlag_peer_link }}
+   heartbeat-interval 2000
+
+{% for m in mlags %}
+interface {{ m.mlag_member }}
+   mlag {{ m.mlag_id }}
+{% endfor %}
+{% endif %}

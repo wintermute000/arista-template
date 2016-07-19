@@ -1,7 +1,7 @@
 {% for v in vlans %}
 vlan {{ v.vlan_id }}
      name {{ v.name }}
-     {% if v.trunk_group is defined %}
+{% if v.trunk_group is defined %}
      trunk group {{ v.trunk_group }}
-     {% endif %}
+{% endif %}
 {% endfor %}

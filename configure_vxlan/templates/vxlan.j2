@@ -1,0 +1,10 @@
+{% if vxlan_interface is defined %}
+interface {{ vxlan_interface }}
+   vxlan source-interface {{ vxlan_src }} {{ vxlan_no }}
+{% for v in vxlan_vni %}
+   vxlan vlan {{ v.vlan }} vni {{ v.vni }}
+{% endfor %}
+{% for f in vxlan_floodlist %}
+   vxlan vlan {{ f.vlan }} flood vtep {{ f.flood_list | join(",") }}
+{% endfor %}
+{% endif %}

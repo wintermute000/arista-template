@@ -7,3 +7,5 @@
     - { role: configure_layer2, tags: ['layer2'] }
     - { role: configure_layer3, tags: ['layer3'] }
     - { role: configure_bgp, tags: ['bgp'] }
+    - { role: configure_mlag, tags: ['mlag'] }
+    - { role: configure_vxlan, tags: ['vxlan'] }

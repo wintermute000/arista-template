@@ -1,8 +1,11 @@
 ip routing
 {% for i in ip_addresses %}
-interface  {{ i.interface }}
+interface {{ i.interface }}
    ip address {{ i.ip_address }}
-   {% if i.description is defined %}
+{% if i.description is defined %}
    description {{ i.description }}
-   {% endif %}
+{% endif %}
+{% if 'Ethernet' in i.interface %}
+   no switchport
+{% endif %}
 {% endfor %}

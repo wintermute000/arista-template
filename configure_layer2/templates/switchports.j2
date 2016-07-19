@@ -1,21 +1,21 @@
 {% for s in switchports %}
 interface {{ s.switchport_id }}
    switchport mode {{ s.mode }}
-  {% if s.description is defined %}
-  description {{ s.description }}
-  {% endif %}
-  {% if s.access_vlan is defined %}
-  switchport access vlan {{ s.access_vlan }}
-  {% endif %}
-  {% if s.voice_vlan is defined %}
-  switchport voice vlan {{ s.voice_vlan }}
-  {% endif %}
-  {% if s.trunk_groups is defined %}
-  {% for t in s.trunk_groups %}
-  switchport trunk group {{ t }}
-  {% endfor %}
-  {% endif %}
-  {% if s.allowed_vlans is defined %}
-  switchport trunk allowed vlan {{ s.allowed_vlans | join(",") }}
-  {% endif %}
+{% if s.description is defined %}
+   description {{ s.description }}
+{% endif %}
+{% if s.access_vlan is defined %}
+   switchport access vlan {{ s.access_vlan }}
+{% endif %}
+{% if s.voice_vlan is defined %}
+   switchport voice vlan {{ s.voice_vlan }}
+{% endif %}
+{% if s.trunk_groups is defined %}
+{% for t in s.trunk_groups %}
+   switchport trunk group {{ t }}
+{% endfor %}
+{% endif %}
+{% if s.allowed_vlans is defined %}
+   switchport trunk allowed vlan {{ s.allowed_vlans | join(",") }}
+{% endif %}
 {% endfor %}

@@ -1,5 +1,8 @@
 {% if bgp_as is defined %}
 router bgp {{ bgp_as }}
-   router-id {{ bgp_rid }}
-   timers bgp {{  bgp_keepalive  }} {{ bgp_holdtime }}
+router-id {{ bgp_rid }}
+    {% if bgp_keepalive is defined %}
+    timers bgp {{  bgp_keepalive  }} {{ bgp_holdtime }}
+    {% endif %}
+    maximum-paths 8 ecmp 8
 {% endif %}

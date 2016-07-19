@@ -1,10 +1,14 @@
 mlag_domain_id: MLAG_LEAF3_LEAF4
 mlag_peer_ip: 172.31.94.5
+mlag_interface: Vlan4094
+mlag_peer_link: Port-channel1
 bgp_as: 65003
 bgp_rid: 192.168.254.14
 bgp_keepalive: 3
 bgp_holdtime: 10
-bgp_lvtep_net: 172.31.1.3
+vxlan_interface: Vxlan1
+vxlan_src: loopback
+vxlan_no: 1
 
 ip_addresses:
   - interface: Loopback0
@@ -47,6 +51,9 @@ vxlan_vni:
     vni: 1020
 
 vxlan_floodlist:
-  - vtep: Vxlan1
+  - vlan: 10
+    flood_list:
+      - 172.31.1.1
+  - vlan: 20
     flood_list:
       - 172.31.1.1

@@ -30,24 +30,37 @@ switchports:
     description: "To-Peer-Switch"
     mode: trunk
     trunk_groups:
-      - "TG_MLAG"
+      - "TG-MLAG"
       - "TG-iBGP"
   - switchport_id: "Port-Channel6"
     description: "To-VLAN-20-host"
     mode: trunk
     allowed_vlans:
-      - 10
+      - 20
   - switchport_id: "Port-Channel7"
     description: "To-VLAN-10-host"
     mode: trunk
     allowed_vlans:
-      - 20
+      - 10
 
 mlags:
   - mlag_id: 6
     mlag_member: "Port-Channel6"
   - mlag_id: 7
     mlag_member: "Port-Channel7"
+
+acls:
+  - acl_name: "ACL-SAMPLE"
+  - acl_interface: Ethernet1/5
+  - acl_contents:
+    - "10 deny tcp any any eq telnet"
+    - "20 permit ip any any"
+  - acl_name: "ACL-SNMP"
+  - acl_contents:
+    - "10 permit udp 192.168.0.0/24 any eq snmp"
+    - "20 deny ip any any"
+
+
 
 
 
