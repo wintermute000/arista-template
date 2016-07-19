@@ -1,4 +1,4 @@
-Creates a sample 2 x spine and 4 x leaf L3 topology with VXLAN via eos_template role in Ansible 2.1+
+Creates a L3 leaf-spine topology with VXLAN via eos_template role in Ansible 2.1+
 
 Tested with vEOS 4.15.5M in Unetlab 1.0.0-12 and Ansible 2.1
 
@@ -6,7 +6,7 @@ http://ansible-eos.readthedocs.io/en/master/quickstart.html
 
 UNDER DEVELOPMENT
 
-TEST TOPOLOGY
+SAMPLE TOPOLOGY VARIABLES
 
 - routed
 - eBGP - spine AS 65000, leaf1/2 AS65001, leaf3/4 AS65003
