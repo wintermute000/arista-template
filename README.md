@@ -7,7 +7,7 @@ http://ansible-eos.readthedocs.io/en/master/quickstart.html
 ### UNDER DEVELOPMENT ###
 v0.2
 - Still testing, fixed indentation to align to eos_template requirements
-- MLAG and VXLAN roles yet to be implemented
+- MLAG/VXLAN functionality appears buggy in vEOS under unetlab - may require restarting hosts in MLAG pairs, behaviour is inconsistent - believe this to be related to virtual lab (i.e. the provisioned configuration is correct if run on hardware)
 
 ### SAMPLE TOPOLOGY VARIABLES ###
 
