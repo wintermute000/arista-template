@@ -53,17 +53,24 @@ leaf4 lo1 logical VTEP - 172.31.1.3/32
   - creates VLANs
   - creates Port-channels
   - configures switchport parameters
+     - mode trunk
+     - trunk-groups
+     - allowed-vlans
+     - mode access
+     - access vlan
 - configure_layer3
   - enables IP routing
   - creates loopbacks and SVIs
   - configures IP addresses
 - configure_BGP
   - creates BGP process
-  - configures peers and network statements
-- configure_MLAG (TO BE DONE)
+  - creates custom timers
+  - configures peer IPs and ASNs
+  - network statements
+- configure_MLAG
   - creates MLAG peering
   - adds members
-- configure_VXLAN (TO BE DONE)
+- configure_VXLAN
   - creates VXLAN interface
   - creates VLAN to VNI mappings
   - configure flood-list
