@@ -1,0 +1,12 @@
+---
+- name: Gather info
+  hosts: all
+  gather_facts: no
+  connection: local
+
+  tasks:
+  - name: Run ad-hoc command
+    eos_template:
+      src: conf.j2
+      provider: "{{ eos_connection }}"
+

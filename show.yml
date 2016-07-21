@@ -1,6 +1,6 @@
 ---
 - name: Gather info
-  hosts: leaf1
+  hosts: all
   gather_facts: no
   connection: local
 

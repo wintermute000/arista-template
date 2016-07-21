@@ -7,4 +7,8 @@ eos_connection:
   transport: eapi
   use_ssl: false
 
-command: "show interfaces"
+command: "show version"
+conf_command:
+   - "interface Port-channel1"
+   - "switchport trunk allowed vlan 10,20"
+   - "no spanning-tree vlan 4093-4094"
