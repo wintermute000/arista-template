@@ -3,3 +3,4 @@
     eos_template:
       src: vxlan.j2
       provider: "{{ eos_connection }}"
+    when: vxlan_interface is defined

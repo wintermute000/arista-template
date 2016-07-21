@@ -3,15 +3,17 @@
     eos_template:
       src: vlans.j2
       provider: "{{ eos_connection }}"
+    when: vlans is defined
 
   - name: Configure Port-channels
     eos_template:
       src: port-channels.j2
       provider: "{{ eos_connection }}"
-      force: yes
+    when: port_channels is defined
 
   - name: Configure Switchports
     eos_template:
       src: switchports.j2
       provider: "{{ eos_connection }}"
-      force: yes
+    when: switchports is defined
+

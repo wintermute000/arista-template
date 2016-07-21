@@ -1,4 +1,3 @@
-{% if mlag_domain_id is defined %}
 mlag
    domain-id {{ mlag_domain_id }}
    local-interface {{ mlag_interface }}
@@ -10,4 +9,3 @@ mlag
 interface {{ m.mlag_member }}
    mlag {{ m.mlag_id }}
 {% endfor %}
-{% endif %}
