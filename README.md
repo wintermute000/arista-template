@@ -25,27 +25,25 @@ v0.2
   - logical VTEPs on Lo1
 - NO vVTEP or anycast GW - hosts are L2 only via VXLAN
 
-spine1-leaf1 - 192.168.1.0/30
-spine1-leaf2 - 192.168.1.4/30
-spine1-leaf3 - 192.168.1.8/30
-spine1-leaf4 - 192.168.1.12/30
-
-spine2-leaf1 - 192.168.2.0/30
-spine2-leaf2 - 192.168.2.4/30
-spine2-leaf3 - 192.168.2.8/30
-spine2-leaf4 - 192.168.2.12/30
-
-spine1 lo0 - 192.168.254.1/32
-spine2 lo0 - 192.168.254.2/32
-leaf1 lo0 - 192.168.254.11/32
-leaf2 lo0 - 192.168.254.12/32
-leaf3 lo0 - 192.168.254.13/32
-leaf4 lo0 - 192.168.254.14/32
-
-leaf1 lo1 logical VTEP - 172.31.1.1/32
-leaf2 lo1 logical VTEP - 172.31.1.1/32
-leaf3 lo1 logical VTEP - 172.31.1.3/32
-leaf4 lo1 logical VTEP - 172.31.1.3/32
+- ADDRESSING
+  - spine1-leaf1 - 192.168.1.0/30
+  - spine1-leaf2 - 192.168.1.4/30
+  - spine1-leaf3 - 192.168.1.8/30
+  - spine1-leaf4 - 192.168.1.12/30
+  - spine2-leaf1 - 192.168.2.0/30
+  - spine2-leaf2 - 192.168.2.4/30
+  - spine2-leaf3 - 192.168.2.8/30
+  - spine2-leaf4 - 192.168.2.12/30
+  - spine1 lo0 - 192.168.254.1/32
+  - spine2 lo0 - 192.168.254.2/32
+  - leaf1 lo0 - 192.168.254.11/32
+  - leaf2 lo0 - 192.168.254.12/32
+  - leaf3 lo0 - 192.168.254.13/32
+  - leaf4 lo0 - 192.168.254.14/32
+  - leaf1 lo1 logical VTEP - 172.31.1.1/32
+  - leaf2 lo1 logical VTEP - 172.31.1.1/32
+  - leaf3 lo1 logical VTEP - 172.31.1.3/32
+  - leaf4 lo1 logical VTEP - 172.31.1.3/32
 
 ### ROLES ###
 
